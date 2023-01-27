@@ -81,14 +81,7 @@ const Product = () => {
               activeColor="#ffd700"
             />
           </p>
-          <p>
-            <Rating
-              name="half-rating-read"
-              defaultValue={products.rating}
-              precision={0.5}
-              readOnly
-            />
-          </p>
+          
           <p>
             <strong>Price: </strong> ${products.price}
           </p>

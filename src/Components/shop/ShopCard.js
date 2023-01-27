@@ -38,19 +38,12 @@ function ShopCard({item}) {
           <ReactStars
             count={8}
             size={24}
-            value={products.rating}
+            value={item.rating}
             edit={false}
             activeColor="#ffd700"
           />
         </div>
-        <div>
-          <Rating
-            name="half-rating-read"
-            defaultValue={item.rating}
-            precision={0.5}
-            readOnly
-          />
-        </div>
+        
         <p>$ {item.price}</p>
         <button onClick={addToBasket}>Add to Cart</button>
       </div>
