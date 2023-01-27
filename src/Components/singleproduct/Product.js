@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer2 from "../footer/Footer2";
 import axios from "../../axios";
-import Rating from "@mui/material/Rating";
+import Rating from "material-ui-rating";
 import reducers from "../../reducers";
 import { getError } from "../../utils";
 import LoadingBox from "../loadings/LoadingBox";
