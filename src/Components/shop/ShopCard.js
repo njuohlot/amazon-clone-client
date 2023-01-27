@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Rating from "@mui/material/Rating";
+import Rating from "material-ui-rating";
 import { Store } from "../../Store";
 import  {Link} from 'react-router-dom'
 import axios from "../../axios";
