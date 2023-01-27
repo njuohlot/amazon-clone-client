@@ -10,6 +10,7 @@ import LoadingBox from "../loadings/LoadingBox";
 import MessageBox from "../MessageBox";
 import { Store } from "../../Store";
 import OptionMenu from '../OptionMenu'
+import ReactStars from "react-rating-stars-component";
 
 const Product = () => {
   const param = useParams();
@@ -70,6 +71,15 @@ const Product = () => {
           </p>
           <p>
             <strong>Category:</strong> {products.cat}
+          </p>
+          <p>
+            <ReactStars
+              count={8}
+              size={24}
+              value={products.rating}
+              edit={false}
+              activeColor="#ffd700"
+            />
           </p>
           <p>
             <Rating

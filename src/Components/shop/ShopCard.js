@@ -34,6 +34,15 @@ function ShopCard({item}) {
 
         <span>{item.title}</span>
         <div>
+          <ReactStars
+            count={8}
+            size={24}
+            value={products.rating}
+            edit={false}
+            activeColor="#ffd700"
+          />
+        </div>
+        <div>
           <Rating
             name="half-rating-read"
             defaultValue={item.rating}
