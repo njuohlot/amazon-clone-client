@@ -19,6 +19,20 @@ import PlaceOrder from "./Components/placeOrder";
 import OrderHistory from "./Components/OrderHistory";
 import Order from "./Components/Order";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import AdminRoute from "./Components/AdminRoute";
+import AdminHome from "./Admin/components/home/AdminHome";
+import User from "./Admin/components/user/User";
+import UserList from "./Admin/components/userList/UserList";
+import Analytic from "./Admin/components/Analytic/Analytic";
+import Transactions from "./Admin/components/Transactions/Transactions";
+import Category from "./Admin/components/cartegory/Category";
+import EditProduct from "./Admin/components/product/EditProduct";
+import ProList from "./Admin/components/ProductList/ProList";
+import Newproduct from "./Admin/components/newProduct/Newproduct";
+import NewUser from "./Admin/components/newuser/NewUser";
+import NewCategory from "./Admin/components/cartegory/NewCategory";
+import DeleteProduct from "./Admin/components/product/DeleteProduct";
+import Report from "./Admin/components/reports/Report";
 
 const promise = loadStripe(
   "pk_test_51LEPZQJr1sv3s4wEBjprZAAoJ19NOzv4OYw7TMNILw2n6yaAtE9wqc0eExzSjl3XCmHzUP1tMCliOFXZsRcS6nDU00sFQyyyC1"
@@ -70,6 +84,110 @@ function App() {
               <ProtectedRoute>
                 <OrderHistory />
               </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/dashboard"
+            element={
+              <AdminRoute>
+                <AdminHome />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/user/:id"
+            element={
+              <AdminRoute>
+                <User />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/users"
+            element={
+              <AdminRoute>
+                <UserList />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/analytic"
+            element={
+              <AdminRoute>
+                <Analytic />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/transactions"
+            element={
+              <AdminRoute>
+                <Transactions />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/category"
+            element={
+              <AdminRoute>
+                <Category />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/products"
+            element={
+              <AdminRoute>
+                <ProList />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/product/:id"
+            element={
+              <AdminRoute>
+                <EditProduct />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/newproduct"
+            element={
+              <AdminRoute>
+                <Newproduct />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/newuser"
+            element={
+              <AdminRoute>
+                <NewUser />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/report"
+            element={
+              <AdminRoute>
+                <Report />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/newcat"
+            element={
+              <AdminRoute>
+                <NewCategory />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/delete/product/:id"
+            element={
+              <AdminRoute>
+                <DeleteProduct />
+              </AdminRoute>
             }
           />
         </Routes>
